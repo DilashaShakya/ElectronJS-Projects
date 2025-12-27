@@ -1,0 +1,1 @@
+console.log("from renderer 2 js working")
