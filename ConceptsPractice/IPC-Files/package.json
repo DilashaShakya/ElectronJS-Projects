@@ -9,8 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "electron": "^39.2.7"
-  }
+  "type": "commonjs"
 }

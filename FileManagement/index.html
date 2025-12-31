@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="header">
+      <h1 class="title">File Management</h1>
+      <p class="subtitle">Create, read, and delete text files and choose where they get saved.</p>
+    </header>
+
+    <section class="card">
+      <div class="topRow">
+        <div class="field">
+          <label class="label" for="file-name">File Name</label>
+          <input class="input" type="text" id="file-name" placeholder="example: notes.txt" />
+        </div>
+
+        <div class="field">
+          <label class="label">Folder</label>
+          <button id="select-btn" type="button" class="btn btn-ghost">Select Folder</button>
+          <div id="folder-label" class="folderLabel">Saving to: (default folder)</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="file-contents">Contents</label>
+        <textarea
+          class="textarea"
+          id="file-contents"
+          rows="10"
+          placeholder="Type your text here..."
+        ></textarea>
+      </div>
+
+      <div class="buttonRow">
+        <button id="create-btn" type="button" class="btn btn-primary">Create</button>
+        <button id="read-btn" type="button" class="btn btn-secondary">Read</button>
+        <button id="delete-btn" type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>

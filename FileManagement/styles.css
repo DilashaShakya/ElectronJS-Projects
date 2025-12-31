@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap");
+
+:root{
+  --ink: #2a2a33;
+  --muted: #6c6a7b;
+
+  --bg: #fff6fb;
+  --dot1: rgba(255, 153, 204, .35);
+  --dot2: rgba(160, 196, 255, .35);
+
+  --card: rgba(255,255,255,.92);
+  --border: rgba(42,42,51,.10);
+
+  --pink: #ff5fa2;
+  --pink2: #ff8cc6;
+  --lav: #8b5cf6;
+  --blue: #4cc9ff;
+  --mint: #38d9a9;
+  --peach: #ffb86b;
+
+  --shadow: 0 16px 40px rgba(42,42,51,.14);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  color: var(--ink);
+  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* cute polka dots + soft gradient */
+  background:
+    radial-gradient(circle at 20px 20px, var(--dot1) 0 7px, transparent 8px) 0 0 / 70px 70px,
+    radial-gradient(circle at 55px 55px, var(--dot2) 0 7px, transparent 8px) 0 0 / 70px 70px,
+    radial-gradient(900px 520px at 15% 10%, rgba(255,95,162,.18), transparent 60%),
+    radial-gradient(900px 520px at 85% 15%, rgba(139,92,246,.14), transparent 60%),
+    linear-gradient(135deg, #fff6fb, #f3fbff);
+  min-height: 100vh;
+}
+
+/* little floating hearts (subtle) */
+body::before{
+  content: "♡  ✦  ♡  ✦  ♡";
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  font-family: "Fredoka", system-ui;
+  font-size: 14px;
+  color: rgba(255,95,162,.50);
+  letter-spacing: 6px;
+  pointer-events: none;
+}
+
+.app{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 30px 18px 44px;
+}
+
+.header{
+  margin-bottom: 16px;
+}
+
+.title{
+  margin: 0;
+  font-family: "Fredoka", system-ui;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: .2px;
+
+  /* candy gradient text */
+  background: linear-gradient(90deg, var(--pink), var(--lav), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle{
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Sticker-style card */
+.card{
+  position: relative;
+  background: var(--card);
+  border: 2px solid rgba(42,42,51,.10);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Cute “tape” corners */
+.card::before,
+.card::after{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 36px;
+  background: rgba(255, 220, 240, .85);
+  border: 1px solid rgba(42,42,51,.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(42,42,51,.08);
+  transform: rotate(-10deg);
+  top: 10px;
+  left: -18px;
+}
+
+.card::after{
+  background: rgba(210, 240, 255, .85);
+  transform: rotate(10deg);
+  top: auto;
+  left: auto;
+  bottom: 10px;
+  right: -18px;
+}
+
+/* Top row layout */
+.topRow{
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label{
+  font-family: "Fredoka", system-ui;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(42,42,51,.72);
+}
+
+/* Inputs – bubbly */
+.input, .textarea{
+  border: 2px solid rgba(42,42,51,.10);
+  background: #fff;
+  border-radius: 18px;
+  padding: 12px 14px;
+  outline: none;
+  color: var(--ink);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.textarea{
+  min-height: 240px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.input:focus, .textarea:focus{
+  border-color: rgba(255,95,162,.35);
+  box-shadow: 0 0 0 6px rgba(255,95,162,.12);
+  transform: translateY(-1px);
+}
+
+/* Folder label like a cute bubble */
+.folderLabel{
+  font-size: 12px;
+  color: rgba(42,42,51,.75);
+  padding: 10px 12px;
+  border-radius: 18px;
+  border: 2px dashed rgba(42,42,51,.10);
+  background: linear-gradient(135deg, rgba(255,95,162,.10), rgba(76,201,255,.10));
+  word-break: break-word;
+}
+
+/* Buttons */
+.buttonRow{
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  border: 2px solid rgba(42,42,51,.10);
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-family: "Fredoka", system-ui;
+  font-weight: 500;
+  letter-spacing: .2px;
+  background: #fff;
+  color: var(--ink);
+  transition: transform .14s ease, box-shadow .14s ease, filter .14s ease;
+  user-select: none;
+}
+
+/* cute bounce hover */
+.btn:hover{
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 22px rgba(42,42,51,.12);
+}
+
+.btn:active{
+  transform: translateY(0px) scale(.99);
+}
+
+/* Candy button styles */
+.btn-primary{
+  background: linear-gradient(135deg, rgba(255,95,162,.25), rgba(139,92,246,.18));
+}
+
+.btn-secondary{
+  background: linear-gradient(135deg, rgba(76,201,255,.22), rgba(56,217,169,.16));
+}
+
+.btn-danger{
+  background: linear-gradient(135deg, rgba(255,184,107,.22), rgba(255,95,162,.18));
+}
+
+.btn-ghost{
+  background: rgba(255,95,162,.08);
+}
+
+/* Footer */
+.footer{
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.kbd{
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 2px solid rgba(42,42,51,.10);
+  background: #fff;
+  font-family: "Fredoka", system-ui;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 760px){
+  .topRow{ grid-template-columns: 1fr; }
+  .buttonRow{ flex-direction: column; }
+  .btn{ width: 100%; justify-content: center; }
+}

@@ -19,3 +19,13 @@ window.typeAPI.typingStatus((message)=>{
     //callback function
     status.textContent = message; //shows status: typing...
 })
+
+//in a real world application context 
+// txt.addEventListener('input', ()=>{
+//     status.textContent = 'Typing...';
+
+//     clearTimeout(timer)
+//     timer = setTimeout(()=>{
+//         status.textContent =''
+//     }, 1000);
+// })
