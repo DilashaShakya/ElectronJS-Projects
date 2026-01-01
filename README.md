@@ -4,7 +4,9 @@ A comprehensive collection of Electron.js practice projects and applications bui
 
 ## 📚 About This Repository
 
-This is a **learning repository** where I practice building desktop applications with Electron.js. The projects range from simple concept demonstrations to full-featured applications. Some projects are based on YouTube tutorials with custom design tweaks and additional features.
+This repository showcases my iterative exploration of Electron.js through concept-focused projects and complete desktop applications. It reflects hands-on experience with Electron fundamentals, IPC patterns, file system operations, and UI integration. Several projects use tutorial-inspired foundations, extended with custom UI design, additional features, and independent experimentation.
+
+
 
 ## 🗂️ Project Structure
 
