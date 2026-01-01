@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Retrograde-Regular';
+  src: url('./assets/Retrograde-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Retrograde-Regular', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  width: 500px;
+  height: 500px;
+  background-image: url('./assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-app-region: drag;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.home-button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.home-button {
+  transition: transform 0.1s ease;
+}
+
+.encouragement-text {
+  font-size: 1.25rem;
+  color: #b1cad8;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease-in-out;
+  transition: opacity 0.8s ease;
+
+}
+
+.encouragement-text.hidden {
+  opacity: 0;
+}
+
+
+
+.home-controls {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.image-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 130px;
+}
+
+.home-timer {
+  font-size: 60px;
+  color: #d09caf;
+  margin: 0;
+}
+
+.gif-image {
+  height:100px;
+}
+
+.home-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.home-button img {
+  width: 120px;
+  height: 130px;  
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.closeButton img {
+  width: 36px;
+  height: 36px;
+}
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+.closeButton:active {
+  transform: scale(0.9);
+}
+
+.image-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.image-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.image-button:active {
+  transform: scale(0.95);
+}
+
+.home-button,
+.image-button,
+.closeButton {
+  -webkit-app-region: no-drag; /* Buttons remain clickable */
+}
