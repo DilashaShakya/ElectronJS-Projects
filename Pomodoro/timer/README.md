@@ -1,46 +1,136 @@
-# Getting Started with Create React App
+# Pomodoro Timer App 🍅
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful, desktop Pomodoro timer application built with React, TypeScript, and Electron. This project was created as a learning exercise to practice building desktop applications with modern web technologies.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Work & Break Modes**: Switch between 25-minute work sessions and 5-minute breaks
+- **Visual Timer**: Large, easy-to-read countdown timer
+- **Custom Images**: Beautiful pixel-art style UI with custom images for work/break modes
+- **Animated Break GIF**: Fun animation during break sessions
+- **Sound Notification**: Audio alert when timer completes
+- **System Tray Integration**: Minimize to system tray and control from there
+- **Frameless Window**: Clean, modern frameless design
+- **Encouragement Messages**: Rotating motivational messages
+- **Non-Resizable Window**: Fixed window size for consistent experience
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Electron** - Desktop application framework
+- **CSS3** - Styling with custom animations
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📦 Installation
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd Pomodoro/timer
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Build the React app:
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Run the Electron app:
+```bash
+npm run electron
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run in development mode:
 
-### `npm run eject`
+1. Start the React development server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. In a separate terminal, run Electron:
+```bash
+npm run electron
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+timer/
+├── public/
+│   ├── electron.js          # Electron main process
+│   └── logo.png              # Tray icon
+├── src/
+│   ├── assets/               # Images, sounds, fonts
+│   │   ├── bg.png           # Background image
+│   │   ├── work.png         # Work mode button
+│   │   ├── break-clicked.png # Break mode button
+│   │   ├── break.gif        # Break animation
+│   │   ├── play.png         # Play button
+│   │   ├── restart.png      # Restart button
+│   │   ├── closeBtn.png     # Close button
+│   │   ├── ding.mp3         # Timer completion sound
+│   │   └── Retrograde-Regular.otf # Custom font
+│   ├── App.tsx              # Main React component
+│   ├── App.css              # Styles
+│   └── index.tsx            # React entry point
+└── package.json
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🎮 Usage
 
-## Learn More
+1. **Start a Work Session**: Click the "Work" button and press play
+2. **Take a Break**: Click the "Break" button and press play
+3. **Pause/Resume**: Click the play/restart button to pause or resume
+4. **System Tray**: 
+   - Right-click the tray icon for menu options
+   - Double-click to show/hide the window
+   - Use "Quit" to fully exit the application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Design Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The UI features a pixel-art aesthetic with custom images
+- Background image can be customized in `src/assets/bg.png`
+- All button images can be replaced with your own designs
+- Break animation GIF can be swapped in `src/assets/break.gif`
+
+## 📝 Learning Notes
+
+This project was built as a learning exercise following a YouTube tutorial, with custom design tweaks and additional features added:
+- Custom image-based UI instead of text buttons
+- System tray integration
+- Sound notifications
+- Frameless window design
+- Custom styling and animations
+
+## 🙏 Credits & Resources
+
+- **Tutorial**: Based on a YouTube tutorial (add link if you have it)
+- **Break Animation**: GIF from [Dribbble](https://dribbble.com) (add specific link if available)
+- **Font**: Retrograde-Regular (custom font included in assets)
+
+## 🔮 Future Improvements
+
+- [ ] Add customizable timer durations
+- [ ] Track daily Pomodoro sessions
+- [ ] Add statistics/analytics
+- [ ] Multiple timer presets
+- [ ] Dark/light theme toggle
+- [ ] Notification system for timer completion
+
+## 📄 License
+
+This project is for educational purposes.
+
+## 🤝 Contributing
+
+This is a personal learning project, but suggestions and feedback are welcome!
+
+---
+
+**Note**: Remember to add your own custom images to the `src/assets/` folder to personalize the app!
